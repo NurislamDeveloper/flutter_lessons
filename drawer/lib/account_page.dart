@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_project/first_project.dart';
+import 'package:drawer/first_project.dart';
 
 class AccountPaage extends StatefulWidget {
   const AccountPaage({super.key});

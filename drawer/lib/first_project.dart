@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_project/account_page.dart';
+import 'package:drawer/account_page.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});

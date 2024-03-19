@@ -19,20 +19,27 @@ class _AccountPaageState extends State<AccountPaage> {
         child: AppBar(
           automaticallyImplyLeading: false, //here I delated arrow defoult
           backgroundColor: Colors.blue,
-          actions: [IconButton(onPressed: () {
-              Navigator.pushAndRemoveUntil(
-                context,
-                MaterialPageRoute(builder: (context) => const MyHomePage()),
-                (route) => false, //in here I move from account to first page I use Navigator pop in here but ut does't work like how I want in here
-              );
-          }, icon:const Padding(
-            padding: EdgeInsets.fromLTRB(0,0,350,200),
-            child: Icon(Icons.arrow_back_outlined,color: Colors.white,size: 28,),
-          )
-            ),
-           ],
-          ),
+          actions: [
+            IconButton(
+                onPressed: () {
+                  Navigator.pushAndRemoveUntil(
+                    context,
+                    MaterialPageRoute(builder: (context) => const MyHomePage()),
+                    (route) =>
+                        false, //in here I move from account to first page I use Navigator pop in here but it doesn't work Like how I want
+                  );
+                },
+                icon: const Padding(
+                  padding: EdgeInsets.fromLTRB(0, 0, 350, 200),
+                  child: Icon(
+                    Icons.arrow_back_outlined,
+                    color: Colors.white,
+                    size: 28,
+                  ),
+                )),
+          ],
         ),
+      ),
     );
   }
 }

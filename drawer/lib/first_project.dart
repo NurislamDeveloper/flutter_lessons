@@ -12,7 +12,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 71, 56, 56),
+      backgroundColor: const Color.fromARGB(255, 71, 56, 56),
       drawer: Drawer(
         backgroundColor: const Color.fromARGB(255, 43, 86, 213),
         child: ListView(

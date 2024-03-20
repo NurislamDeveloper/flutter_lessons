@@ -35,16 +35,24 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             TextField(
+              style: const TextStyle(
+                color: Colors.white,
+                fontSize: 14,
+              ),
               onChanged: (num) {
                 name = num;
               },
               decoration: const InputDecoration(
                 hintText: "Enter your name",
-                hintStyle: TextStyle(color: Colors.white),
+                hintStyle: TextStyle(
+                  color: Colors.white,
+                ),
                 border: OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(
                   12,
-                ))),
+                ),
+                ),
+                ),
                 prefixIcon: Icon(
                   Icons.account_circle_outlined,
                   color: Colors.white,
@@ -53,6 +61,10 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             TextFormField(
+              style: const TextStyle(
+                color: Colors.white,
+                fontSize: 14,
+              ),
               onChanged: (work) {
                 major = work;
               },
@@ -73,6 +85,10 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             TextFormField(
+              style: const TextStyle(
+                color: Colors.white,
+                fontSize: 14,
+              ),
               onChanged: (myim) {
                 email = myim;
               },
@@ -82,9 +98,12 @@ class _MyHomePageState extends State<MyHomePage> {
                   color: Colors.white,
                 ),
                 border: OutlineInputBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(
-                  12,
-                ))),
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(
+                      12,
+                    ),
+                  ),
+                ),
                 prefixIcon: Icon(
                   Icons.email_outlined,
                   color: Colors.white,
@@ -92,32 +111,52 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
             ),
-          const   SizedBox(height: 50,),
+            const SizedBox(
+              height: 50,
+            ),
             ElevatedButton(
-              style: const ButtonStyle(backgroundColor:  MaterialStatePropertyAll(Colors.blue,)),
+              style: const ButtonStyle(
+                  backgroundColor: MaterialStatePropertyAll(
+                Colors.blue,
+              )),
               onPressed: () {
-            if(name.isEmpty&& major.isEmpty && email.isEmpty){
-              ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-              content:Text("you have to fill !")
-              )
-              );
-            }else{
-              Navigator.push(context, MaterialPageRoute(builder: (context) => SecondPage(
-              userName: name,
-              userWork: major,
-              userEmail: email,
-              )));
-            }
-            },
-            
-             child: const Text(
-              "sign in",
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 20,
+                if (name.isEmpty || email.isEmpty) {
+                  // ||this any  here I wrote code if any of them is empty show the scankBar
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    const SnackBar(
+                      backgroundColor: Color.fromARGB(255, 10, 33, 51),
+                      content: Center(
+                        child: Text(
+                          "you have to fill !",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 18,
+                          ),
+                        ),
+                      ),
+                    ),
+                  );
+                } else {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => SecondPage(
+                        userName: name,
+                        userWork: major, // ?
+                        userEmail: email,
+                      ),
+                    ),
+                  );
+                }
+              },
+              child: const Text(
+                "sign in",
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 20,
                 ),
-                ),
-                )
+              ),
+            ),
           ],
         ),
       ),

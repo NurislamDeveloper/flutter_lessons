@@ -15,15 +15,19 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black12,
+      backgroundColor: const Color.fromARGB(
+        255,
+        12,
+        38,
+        58,
+      ),
       appBar: AppBar(
-        automaticallyImplyLeading: false,
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.grey,
         centerTitle: true,
         title: const Text(
-          "Nurislam",
+          "Visit Card",
           style: TextStyle(
-            color: Colors.black,
+            color: Colors.white,
             fontSize: 28,
           ),
         ),
@@ -34,22 +38,33 @@ class _MyHomePageState extends State<MyHomePage> {
             children: [
               const CircleAvatar(
                 backgroundColor: Colors.orangeAccent,
-                radius: 150,
-                backgroundImage:
-                    AssetImage("assets/image/boy_with _laptop.jpg"),
+                radius: 120,
+                backgroundImage: AssetImage(
+                  "assets/image/boy_with _laptop.jpg",
+                ),
               ),
               const Text(
-                "Peaksoft House",
+                "Temirbekov Nurislam",
                 style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 48,
-                    fontWeight: FontWeight.w400,
-                    fontFamily: "Pacifico-Regular"),
+                  color: Colors.white,
+                  fontSize: 48,
+                  fontWeight: FontWeight.w400,
+                  fontFamily: "Yellowtail-Regular",
+                ),
+              ),
+              const Text(
+                "Flutter Developer",
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 48,
+                  fontWeight: FontWeight.w400,
+                  fontFamily: "LuxuriousRoman-Regular",
+                ),
               ),
               const Divider(
                 color: Colors.white,
-                indent: 40,
-                endIndent: 30,
+                indent: 20,
+                endIndent: 20,
                 height: 10,
               ),
               const SizedBox(
@@ -60,14 +75,29 @@ class _MyHomePageState extends State<MyHomePage> {
                   phoneNumber = number;
                 },
                 decoration: const InputDecoration(
-                    prefixIcon: Icon(
-                      Icons.phone,
-                      color: Colors.black,
+                  prefixIcon: Icon(
+                    Icons.phone,
+                    color: Color.fromARGB(
+                      255,
+                      12,
+                      38,
+                      58,
                     ),
-                    fillColor: Colors.white,
-                    filled: true,
-                    border: OutlineInputBorder(),
-                    hintText: "Your number"),
+                    size: 27,
+                  ),
+                  fillColor: Colors.white,
+                  filled: true,
+                  border: OutlineInputBorder(),
+                  hintText: " Enter your number",
+                  suffixStyle: TextStyle(
+                    color: Color.fromARGB(
+                      255,
+                      12,
+                      38,
+                      58,
+                    ),
+                  ),
+                ),
               ),
               const SizedBox(
                 height: 30,
@@ -77,44 +107,95 @@ class _MyHomePageState extends State<MyHomePage> {
                   email = emails;
                 },
                 decoration: const InputDecoration(
-                    prefixIcon: Icon(
-                      Icons.email,
-                      color: Colors.black,
+                  prefixIcon: Icon(
+                    Icons.email,
+                    color: Color.fromARGB(
+                      255,
+                      12,
+                      38,
+                      58,
                     ),
-                    fillColor: Color.fromARGB(255, 255, 255, 255),
-                    filled: true,
-                    border: OutlineInputBorder(),
-                    hintText: "Your email "),
+                    size: 27,
+                  ),
+                  fillColor: Color.fromARGB(
+                    255,
+                    255,
+                    255,
+                    255,
+                  ),
+                  filled: true,
+                  border: OutlineInputBorder(),
+                  hintText: "Enter your email ",
+                  suffixStyle: TextStyle(
+                    color: Color.fromARGB(
+                      255,
+                      12,
+                      38,
+                      58,
+                    ),
+                  ),
+                ),
               ),
               const SizedBox(
                 height: 30,
               ),
               ElevatedButton(
-                style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.blueGrey)),
-                  onPressed: () {
-                    if (phoneNumber.isEmpty && email.isEmpty) {
-                      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-                          content:
-                              Text("your have to write your number in here")));
-                    } else {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => FirstPage(
-                                    usernumber: phoneNumber,
-                                    userphone: email,
-                                  )));
-                    }
-                  },
-                  child: const Text(
-                    "send",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 18,
-                    ),
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all(
+                    Colors.white,
                   ),
-                
-               ),
+                ),
+                onPressed: () {
+                  if (phoneNumber.isEmpty || email.isEmpty) {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      const SnackBar(
+                        backgroundColor: Colors.white,
+                        content: Center(
+                          child: Text(
+                            "Please fill it out ",
+                            style: TextStyle(
+                              color: Color.fromARGB(
+                                255,
+                                12,
+                                38,
+                                58,
+                              ),
+                              fontWeight: FontWeight.bold,
+                              fontSize: 18,
+                            ),
+                          ),
+                        ),
+                        duration: Duration(
+                          milliseconds: 500,
+                        ),
+                      ),
+                    );
+                  } else {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => FirstPage(
+                          usernumber: phoneNumber,
+                          userphone: email,
+                        ),
+                      ),
+                    );
+                  }
+                },
+                child: const Text(
+                  "send",
+                  style: TextStyle(
+                    color: Color.fromARGB(
+                      255,
+                      12,
+                      38,
+                      58,
+                    ),
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
             ],
           ),
         ),

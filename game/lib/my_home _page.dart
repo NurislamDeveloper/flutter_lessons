@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:audioplayers/audioplayers.dart';
 import 'package:confetti/confetti.dart';
 import 'package:flutter/material.dart';
 
@@ -12,9 +13,10 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
   int first = Random().nextInt(6) + 1;
-  int second = Random().nextInt(6) + 1;
+  int second = Random().nextInt(6) + 1;  // we're importing the dart:math library to use the Random class for generating random numbers. The Random class provides methods like nextInt() for generating random integers
 
   late ConfettiController _controllerTopCenter;
+final player = AudioPlayer();
 
   bool isPlay = false;
   late AnimationController controller;
@@ -27,21 +29,27 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
         seconds: 5,
       ),
     );
-    controller =
-        AnimationController(vsync: this, duration: const Duration(seconds: 5));
+    controller = AnimationController(
+      vsync: this,
+      duration: const Duration(
+        seconds: 5,
+      ),
+    );
   }
 
   void activity() {
-    setState(() {
-      first = Random().nextInt(6) + 1;
-      second = Random().nextInt(6) + 1;
-      
-        if(first == 3 && second == 4){
-        _controllerTopCenter.play();
-        controller;
+    setState(
+      () {
+        first = Random().nextInt(6) + 1;
+        second = Random().nextInt(6) + 1;
+
+        if (first == 3 && second == 4) {
+          _controllerTopCenter.play();
+          controller;
+         player.play(AssetSource('notes/nota1.mp3'));
         }
-      
-    });
+      },
+    );
   }
 
   @override
@@ -98,26 +106,30 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
             const SizedBox(
               height: 50,
             ),
-            ElevatedButton(onPressed: () {
-            setState(() {
-               if(isPlay = false) {
-                controller.forward(); 
-               }else{
-                controller.reverse();
-                isPlay = true;
-               }
-              activity();
-            });
-            }, 
-            child: Column(
-              children: [
-               AnimatedIcon(
-                icon: AnimatedIcons.play_pause,
-                 progress: controller,
-                ),
-               const  Text("Click",),
-              ],
-             ),
+            ElevatedButton(
+              onPressed: () {
+                setState(() {
+                  if (isPlay = false) {
+                    controller.forward();
+                  } else {
+                    controller.reverse();
+                    isPlay = true;
+                  }
+                  activity();
+                 },
+                );
+              },
+              child: Column(
+                children: [
+                  AnimatedIcon(
+                    icon: AnimatedIcons.play_pause,
+                    progress: controller,
+                  ),
+                  const Text(
+                    "Click",
+                  ),
+                ],
+              ),
             ),
             // ElevatedButton.icon(
             //   style: const ButtonStyle(

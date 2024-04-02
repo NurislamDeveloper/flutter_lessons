@@ -71,7 +71,6 @@ class PianaView extends StatelessWidget {
                 Positioned(
                   left: 39,
                   child: Container(
-                    // color: Colors.black,
                     width: 50,
                     height: 160,
                     decoration: const BoxDecoration(
@@ -85,7 +84,6 @@ class PianaView extends StatelessWidget {
                         ),
                       ),
                     ),
-                    
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [Text(
@@ -101,7 +99,6 @@ class PianaView extends StatelessWidget {
                 Positioned(
                   left: 107,
                   child: Container(
-                    // color: Colors.black,
                     width: 50,
                     height: 160,
                     decoration: const BoxDecoration(
@@ -123,14 +120,13 @@ class PianaView extends StatelessWidget {
                           color: Colors.white,
                         ),
                       ),
-                      ],
+                    ],
                   ),
                 ),
                 ),
                 Positioned(
                   left: 237,
                   child: Container(
-                    // color: Colors.black,
                     width: 50,
                     height: 160,
                     decoration: const BoxDecoration(
@@ -155,11 +151,10 @@ class PianaView extends StatelessWidget {
                       ],
                   ),
                 ),
-                ),
+              ),
                 Positioned(
                   left: 305,
                   child: Container(
-                    // color: Colors.black,
                     width: 50,
                     height: 160,
                     decoration: const BoxDecoration(
@@ -188,7 +183,6 @@ class PianaView extends StatelessWidget {
                 Positioned(
                   left: 372,
                   child: Container(
-                    // color: Colors.black,
                     width: 50,
                     height: 160,
                     decoration: const BoxDecoration(
@@ -210,14 +204,13 @@ class PianaView extends StatelessWidget {
                           color: Colors.white,
                         ),
                       ),
-                      ],
+                    ],
                   ),
                 ),
-                ),
+               ),
                 Positioned(
                   right: 360,
                   child: Container(
-                    // color: Colors.black,
                     width: 50,
                     height: 160,
                     decoration: const BoxDecoration(
@@ -239,14 +232,13 @@ class PianaView extends StatelessWidget {
                           color: Colors.white,
                         ),
                       ),
-                      ],
+                    ],
                   ),
                 ),
-                ),
+               ),
                 Positioned(
                   right: 295,
                   child: Container(
-                    // color: Colors.black,
                     width: 50,
                     height: 160,
                     decoration: const BoxDecoration(
@@ -275,7 +267,6 @@ class PianaView extends StatelessWidget {
                 Positioned(
                   right: 160,
                   child: Container(
-                    // color: Colors.black,
                     width: 50,
                     height: 160,
                     decoration: const BoxDecoration(
@@ -297,14 +288,13 @@ class PianaView extends StatelessWidget {
                           color: Colors.white,
                         ),
                       ),
-                      ],
+                    ],
                   ),
-                ),
-                ),
+                 ),
+               ),
                 Positioned(
                   right: 95,
                   child: Container(
-                    // color: Colors.black,
                     width: 50,
                     height: 160,
                     decoration: const BoxDecoration(
@@ -333,7 +323,6 @@ class PianaView extends StatelessWidget {
                 Positioned(
                   right: 30,
                   child: Container(
-                    // color: Colors.black,
                     width: 50,
                     height: 160,
                     decoration: const BoxDecoration(

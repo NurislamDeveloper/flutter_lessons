@@ -66,7 +66,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ),
               ),
-           const    Gap(10),
+           const Gap(10),
               Padding(
                 padding: const EdgeInsets.only(left: 10,right: 10,),
                 child: Container(

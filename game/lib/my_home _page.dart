@@ -1,6 +1,5 @@
 import 'dart:math';
 
-import 'package:audioplayers/audioplayers.dart';
 import 'package:confetti/confetti.dart';
 import 'package:flutter/material.dart';
 
@@ -16,7 +15,6 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
   int second = Random().nextInt(6) + 1;  // we're importing the dart:math library to use the Random class for generating random numbers. The Random class provides methods like nextInt() for generating random integers
 
   late ConfettiController _controllerTopCenter;
-final player = AudioPlayer();
 
   bool isPlay = false;
   late AnimationController controller;
@@ -46,7 +44,6 @@ final player = AudioPlayer();
         if (first == 3 && second == 4) {
           _controllerTopCenter.play();
           controller;
-         player.play(AssetSource('notes/nota1.mp3'));
         }
       },
     );

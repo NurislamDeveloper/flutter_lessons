@@ -98,13 +98,13 @@ class PianaView extends StatelessWidget {
                   child: Row(
                     children: [
                       BlackButton(notes: notes,nota: 1,),
-                      Gap(10),
+                      const Gap(10),
                         BlackButton(notes: notes,nota: 2,),
-                        Gap(10),
+                        const Gap(10),
                         BlackButton(notes: notes,nota: 3,),
-                        Gap(65),
+                        const Gap(65),
                           BlackButton(notes: notes,nota: 3,),
-                          Gap(10),
+                          const Gap(10),
                           BlackButton(notes: notes,nota: 3,),
                     ],
                   ),

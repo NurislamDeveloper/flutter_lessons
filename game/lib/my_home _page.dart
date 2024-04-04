@@ -16,19 +16,10 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
 
   late ConfettiController _controllerTopCenter;
 
-  bool isPlay = false;
-  late AnimationController controller;
-
   @override
   void initState() {
     super.initState();
     _controllerTopCenter = ConfettiController(
-      duration: const Duration(
-        seconds: 5,
-      ),
-    );
-    controller = AnimationController(
-      vsync: this,
       duration: const Duration(
         seconds: 5,
       ),
@@ -40,10 +31,8 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
       () {
         first = Random().nextInt(6) + 1;
         second = Random().nextInt(6) + 1;
-
         if (first == 3 && second == 4) {
           _controllerTopCenter.play();
-          controller;
         }
       },
     );
@@ -52,7 +41,6 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
   @override
   void dispose() {
     _controllerTopCenter.dispose();
-    controller.dispose();
     super.dispose();
   }
 
@@ -104,64 +92,17 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
               height: 50,
             ),
             ElevatedButton(
-              onPressed: () {
-                setState(() {
-                  if (isPlay = false) {
-                    controller.forward();
-                  } else {
-                    controller.reverse();
-                    isPlay = true;
-                  }
-                  activity();
-                 },
-                );
+              onPressed:() {
+              activity();
               },
-              child: Column(
+              child:const  Column(
                 children: [
-                  AnimatedIcon(
-                    icon: AnimatedIcons.play_pause,
-                    progress: controller,
-                  ),
-                  const Text(
+                     Text(
                     "Click",
                   ),
                 ],
               ),
             ),
-            // ElevatedButton.icon(
-            //   style: const ButtonStyle(
-            //     backgroundColor: MaterialStatePropertyAll(
-            //       Colors.blueAccent,
-            //     ),
-            //   ),
-            //   onPressed: () {
-            //     if (isPlay = false) {
-            //       controller.forward();
-            //       isPlay = true;
-            //     } else {
-            //       controller.reverse();
-            //       isPlay = false;
-            //     }
-            //     setState(() {
-            //       activity();
-            //     });
-            //   },
-            //   icon: const Icon(
-            //     Icons.play_arrow,
-            //   ),
-            //   // icon: const Icon(
-            //   //   Icons.play_arrow,
-            //   //   size: 22,
-            //   //   color: Colors.white,
-
-            //   label: const Text(
-            //     "Click it",
-            //     style: TextStyle(
-            //       color: Colors.white,
-            //       fontSize: 22,
-            //     ),
-            //   ),
-            // ),
             ConfettiWidget(
               confettiController: _controllerTopCenter,
               blastDirection: -pi / 2,

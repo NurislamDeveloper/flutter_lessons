@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
         color: Colors.black,
        ),
       ),
-      home: const PianaView(),
+      home: PianaView()
     );
   }
 }

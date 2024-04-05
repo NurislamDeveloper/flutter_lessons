@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:gap/gap.dart';
+import 'package:piano_con/appbar.dart';
+import 'package:piano_con/black_buttom.dart';
 
 class PianaView extends StatelessWidget {
   const PianaView({super.key, });
@@ -30,17 +32,17 @@ class PianaView extends StatelessWidget {
      "nota1",
      "nota2",
      "nota3",
-       "nota4",
-        "nota5",
-         "nota6",
-          "nota7",
-           "nota1",
+     "nota4",
+     "nota5",
+     "nota6",
+     "nota7",
+     "nota1",
      "nota2",
      "nota3",
-       "nota4",
-        "nota5",
-         "nota6",
-          "nota7",
+     "nota4",
+     "nota5",
+     "nota6",
+     "nota7",
    ];
     return Scaffold(
       appBar: myAppBar(),
@@ -97,272 +99,28 @@ class PianaView extends StatelessWidget {
                   left: 37,
                   child: Row(
                     children: [
-                      BlackButton(notes: notes,nota: 1,),
+                      BlackButton(notes: notes[0],nota: 1,),
                       const Gap(10),
-                        BlackButton(notes: notes,nota: 2,),
-                        const Gap(10),
-                        BlackButton(notes: notes,nota: 3,),
-                        const Gap(65),
-                          BlackButton(notes: notes,nota: 3,),
-                          const Gap(10),
-                          BlackButton(notes: notes,nota: 3,),
+                      BlackButton(notes: notes[1],nota: 2,),
+                      const Gap(60),
+                      BlackButton(notes: notes[3],nota: 3,),
+                      const Gap(15),
+                      BlackButton(notes: notes[4],nota: 4,),
+                      const Gap(8),
+                      BlackButton(notes: notes[5],nota: 5,),
+                      const Gap(63),
+                      BlackButton(notes: notes[6],nota: 6,),
+                      const Gap(15),
+                      BlackButton(notes: notes[7],nota: 7,),
+                      const Gap(65),
+                      BlackButton(notes: notes[8],nota: 1,),
+                      const Gap(12),
+                      BlackButton(notes: notes[9],nota: 2,),
+                      const Gap(10),
+                      BlackButton(notes: notes[10],nota: 3,),
                     ],
                   ),
                 ),
-              //   Positioned(
-              //     left: 100,
-              //     child: Container(
-              //       width: 50,
-              //       height: 160,
-              //       decoration: const BoxDecoration(
-              //         color: Colors.black,
-              //         borderRadius: BorderRadius.only(
-              //           bottomLeft: Radius.circular(
-              //             5,
-              //           ),
-              //           bottomRight: Radius.circular(
-              //             5,
-              //           ),
-              //         ),
-              //       ),
-              //       child: Column(
-              //         mainAxisAlignment: MainAxisAlignment.end,
-              //         children: [Text(
-              //           notes[1],
-              //           style:const TextStyle(
-              //             color: Colors.white,
-              //           ),
-              //         ),
-              //       ],
-              //     ),
-              //   ),
-              //   ),
-              //   Positioned(
-              //     left: 212,
-              //     child: Container(
-              //       width: 50,
-              //       height: 160,
-              //       decoration: const BoxDecoration(
-              //         color: Colors.black,
-              //         borderRadius: BorderRadius.only(
-              //           bottomLeft: Radius.circular(
-              //             5,
-              //           ),
-              //           bottomRight: Radius.circular(
-              //             5,
-              //           ),
-              //         ),
-              //       ),
-              //       child: Column(
-              //         mainAxisAlignment: MainAxisAlignment.end,
-              //         children: [Text(
-              //           notes[2],
-              //           style:const TextStyle(
-              //             color: Colors.white,
-              //           ),
-              //         ),
-              //         ],
-              //     ),
-              //   ),
-              // ),
-              //   Positioned(
-              //     left: 273,
-              //     child: Container(
-              //       width: 50,
-              //       height: 160,
-              //       decoration: const BoxDecoration(
-              //         color: Colors.black,
-              //         borderRadius: BorderRadius.only(
-              //           bottomLeft: Radius.circular(
-              //             5,
-              //           ),
-              //           bottomRight: Radius.circular(
-              //             5,
-              //           ),
-              //         ),
-              //       ),
-              //       child: Column(
-              //         mainAxisAlignment: MainAxisAlignment.end,
-              //         children: [Text(
-              //           notes[3],
-              //           style:const TextStyle(
-              //             color: Colors.white,
-              //           ),
-              //         ),
-              //         ],
-              //     ),
-              //   ),
-              //   ),
-              //   Positioned(
-              //     left: 330,
-              //     child: Container(
-              //       width: 50,
-              //       height: 160,
-              //       decoration: const BoxDecoration(
-              //         color: Colors.black,
-              //         borderRadius: BorderRadius.only(
-              //           bottomLeft: Radius.circular(
-              //             5,
-              //           ),
-              //           bottomRight: Radius.circular(
-              //             5,
-              //           ),
-              //         ),
-              //       ),
-              //       child: Column(
-              //         mainAxisAlignment: MainAxisAlignment.end,
-              //         children: [Text(
-              //           notes[4],
-              //           style:const TextStyle(
-              //             color: Colors.white,
-              //           ),
-              //         ),
-              //       ],
-              //     ),
-              //   ),
-              //  ),
-              //   Positioned(
-              //     right: 320,
-              //     child: Container(
-              //       width: 50,
-              //       height: 160,
-              //       decoration: const BoxDecoration(
-              //         color: Colors.black,
-              //         borderRadius: BorderRadius.only(
-              //           bottomLeft: Radius.circular(
-              //             5,
-              //           ),
-              //           bottomRight: Radius.circular(
-              //             5,
-              //           ),
-              //         ),
-              //       ),
-              //       child: Column(
-              //         mainAxisAlignment: MainAxisAlignment.end,
-              //         children: [Text(
-              //           notes[5],
-              //           style:const TextStyle(
-              //             color: Colors.white,
-              //           ),
-              //         ),
-              //       ],
-              //     ),
-              //   ),
-              //  ),
-              //   Positioned(
-              //     right: 263,
-              //     child: Container(
-              //       width: 50,
-              //       height: 160,
-              //       decoration: const BoxDecoration(
-              //         color: Colors.black,
-              //         borderRadius: BorderRadius.only(
-              //           bottomLeft: Radius.circular(
-              //             5,
-              //           ),
-              //           bottomRight: Radius.circular(
-              //             5,
-              //           ),
-              //         ),
-              //       ),
-              //       child: Column(
-              //         mainAxisAlignment: MainAxisAlignment.end,
-              //         children: [Text(
-              //           notes[6],
-              //           style:const TextStyle(
-              //             color: Colors.white,
-              //           ),
-              //         ),
-              //         ],
-              //     ),
-              //   ),
-              //   ),
-              //   Positioned(
-              //     right: 142,
-              //     child: Container(
-              //       width: 50,
-              //       height: 160,
-              //       decoration: const BoxDecoration(
-              //         color: Colors.black,
-              //         borderRadius: BorderRadius.only(
-              //           bottomLeft: Radius.circular(
-              //             5,
-              //           ),
-              //           bottomRight: Radius.circular(
-              //             5,
-              //           ),
-              //         ),
-              //       ),
-              //       child: Column(
-              //         mainAxisAlignment: MainAxisAlignment.end,
-              //         children: [Text(
-              //           notes[7],
-              //           style:const TextStyle(
-              //             color: Colors.white,
-              //           ),
-              //         ),
-              //       ],
-              //     ),
-              //    ),
-              //  ),
-              //   Positioned(
-              //     right: 85,
-              //     child: Container(
-              //       width: 50,
-              //       height: 160,
-              //       decoration: const BoxDecoration(
-              //         color: Colors.black,
-              //         borderRadius: BorderRadius.only(
-              //           bottomLeft: Radius.circular(
-              //             5,
-              //           ),
-              //           bottomRight: Radius.circular(
-              //             5,
-              //           ),
-              //         ),
-              //       ),
-              //       child: Column(
-              //         mainAxisAlignment: MainAxisAlignment.end,
-              //         children: [Text(
-              //           notes[8],
-              //           style:const TextStyle(
-              //             color: Colors.white,
-              //           ),
-              //         ),
-              //         ],
-              //     ),
-              //   ),
-              //   ),
-              //   Positioned(
-              //     right: 27,
-              //     child: Container(
-              //       width: 50,
-              //       height: 160,
-              //       decoration: const BoxDecoration(
-              //         color: Colors.black,
-              //         borderRadius: BorderRadius.only(
-              //           bottomLeft: Radius.circular(
-              //             5,
-              //           ),
-              //           bottomRight: Radius.circular(
-              //             5,
-              //           ),
-              //         ),
-              //       ),
-              //       child: Column(
-              //         mainAxisAlignment: MainAxisAlignment.end,
-              //         children: [Text(
-              //           notes[9],
-              //           style:const TextStyle(
-              //             color: Colors.white,
-              //           ),
-              //         ),
-              //         ],
-              //     ),
-              //   ),
-              //   ),
-              
-              
               ],
             ),
           ),
@@ -370,61 +128,5 @@ class PianaView extends StatelessWidget {
       ),
     );
   }
-  AppBar myAppBar() {
-    return AppBar(
-      centerTitle: true,
-      title: const Text(
-        "My piano App",
-        style: TextStyle(
-          color: Colors.white,
-          fontSize: 30,
-        ),
-      ),
-    );
-  }
 }
 
-class BlackButton extends StatelessWidget {
-  const BlackButton({
-    super.key,
-    required this.notes, required this.nota, 
-  });
-   final int nota;
-  final List<String> notes;
-
-  @override
-  Widget build(BuildContext context) {
-    final player = AudioPlayer();
-
-    return InkWell(
-      onTap: (){
-        player.play(AssetSource('nota$nota.mp3'));
-      },
-      child: Container(
-        width: 50,
-        height: 160,
-        decoration: const BoxDecoration(
-          color: Colors.black,
-          borderRadius: BorderRadius.only(
-            bottomLeft: Radius.circular(
-              5,
-            ),
-            bottomRight: Radius.circular(
-              5,
-            ),
-          ),
-        ),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.end,
-          children: [Text(
-            notes[0],
-            style:const TextStyle(
-              color: Colors.white,
-            ),
-          ),
-          ],
-        ),
-      ),
-    );
-  }
-}

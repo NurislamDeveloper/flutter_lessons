@@ -13,13 +13,14 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor:const  Color.fromARGB(255, 3, 22, 37),
       appBar: AppBar(
         centerTitle: true,
         title:const  Text(
           "ListViewBuilder",
         ),
       ),
-      body: ListPages(),
+      body: const ListPages(),
     );
   }
 }

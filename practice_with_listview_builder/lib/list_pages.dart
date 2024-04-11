@@ -1,13 +1,10 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class ListPages extends StatelessWidget {
   const ListPages({
     super.key, 
     // required this.images, required this.colorsOfConteiner,
    }
-   
   );
   // final String images;
   // final String colorsOfConteiner;
@@ -33,37 +30,26 @@ class ListPages extends StatelessWidget {
     Colors.indigo,
     Colors.cyan,
     ];
-    return Scaffold(
-      backgroundColor:const  Color.fromARGB(255, 4, 33, 56),
-      body:Padding(
-        padding: const EdgeInsets.only(top: 50, ),
-        child: SizedBox(
-          width: 250,
-          height: 150,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-
-            children: [   
-               Expanded(
-                 child: ListView.builder(
-                 shrinkWrap: false,
-                 scrollDirection: Axis.horizontal,       
-                 itemCount: 7,
-                 itemBuilder:  (context, index) {
-                  return   Container(
-                  decoration: BoxDecoration(
-                    borderRadius:const  BorderRadius.all(Radius.circular(30)),
-                     color: colorsOfConteiner[index],
-                     image: DecorationImage(image: AssetImage(images[index]),)
-                     ),
-                    );
-                  },
+    return Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [   
+           Expanded(
+             child: ListView.builder(
+             shrinkWrap:true,
+             scrollDirection: Axis.horizontal,       
+             itemCount: 7,
+             itemBuilder:  (context, index) {
+              return   Container(
+              decoration: BoxDecoration(
+                borderRadius:const  BorderRadius.all(Radius.circular(30)),
+                 color: colorsOfConteiner[index],
+                 image: DecorationImage(image: AssetImage(images[index]),)
                  ),
-               ),
-            ],
-          ),
-        ),
-      ),
-    );
+                );
+              },
+             ),
+           ),
+        ],
+      );
   }
 }

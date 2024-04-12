@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:gap/gap.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -11,6 +10,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int count = 0;
+  bool isTrue = false;
 
   void increment(int count) {
     setState(() {});
@@ -22,11 +22,11 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void result() {
     if (count == 10 || count == -10) {
-       showDialog<String>(
+      showDialog<String>(
         context: context,
         builder: (BuildContext context) => AlertDialog(
           title: const Text('AlertDialog Title'),
-          content:  Text("$count"),
+          content: Text("$count"),
           actions: <Widget>[
             TextButton(
               onPressed: () => Navigator.pop(context, 'Cancel'),
@@ -39,6 +39,12 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       );
+      count = 0;
+      setState(() {});
+    } else if (count >= 11) {
+      setState(() {
+        isTrue = true;
+      });
     }
   }
 
@@ -90,6 +96,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   onPressed: () {
                     increment(count++);
                     result();
+                    if (isTrue);
                   },
                   child: const Icon(
                     Icons.add,
@@ -99,6 +106,16 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ],
             ),
+            const Gap(
+              20,
+            ),
+            const Text(
+              "Hello",
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 22,
+              ),
+            )
           ],
         ),
       ),

@@ -26,16 +26,83 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Column(
         children: [
-          PianKeys(color: Colors.redAccent, text: 'do', onTap: ()   => audioPlayer.play(AssetSource("nota1.mp3")),),
-          PianKeys(color: Colors.purpleAccent, text: 're', onTap: () {audioPlayer.play(AssetSource("nota2.mp3"));},),
-          PianKeys(color: Colors.yellow, text: 'mw', onTap: () {audioPlayer.play(AssetSource("nota3.mp3"));},),
-          PianKeys(color: Colors.green, text: 'fa', onTap: () {audioPlayer.play(AssetSource("nota4.mp3"));},),
-          PianKeys(color: const Color.fromARGB(255, 0, 230, 238), text: 'sol', onTap: () {audioPlayer.play(AssetSource("nota5.mp3"));},),
-          PianKeys(color: Colors.blue, text: 'la', onTap: () {audioPlayer.play(AssetSource("nota6.mp3"));  },),
-          PianKeys(color: Colors.orange, text: 'si', onTap: () {audioPlayer.play(AssetSource("nota7.mp3"));},),
+          PianKeys(
+            color: Colors.redAccent,
+            text: 'D O',
+            onTap: () => audioPlayer.play(
+              AssetSource(
+                "nota1.mp3",
+              ),
+            ),
+          ),
+          PianKeys(
+            color: Colors.purpleAccent,
+            text: 'R E',
+            onTap: () {
+              audioPlayer.play(
+                AssetSource(
+                  "nota2.mp3",
+                ),
+              );
+            },
+          ),
+          PianKeys(
+            color: Colors.yellow,
+            text: 'M E',
+            onTap: () {
+              audioPlayer.play(
+                AssetSource(
+                  "nota3.mp3",
+                ),
+              );
+            },
+          ),
+          PianKeys(
+            color: Colors.green,
+            text: 'F A',
+            onTap: () {
+              audioPlayer.play(
+                AssetSource(
+                  "nota4.mp3",
+                ),
+              );
+            },
+          ),
+          PianKeys(
+            color: const Color.fromARGB(255, 0, 230, 238),
+            text: 'S O L',
+            onTap: () {
+              audioPlayer.play(
+                AssetSource(
+                  "nota5.mp3",
+                ),
+              );
+            },
+          ),
+          PianKeys(
+            color: Colors.blue,
+            text: 'L A',
+            onTap: () {
+              audioPlayer.play(
+                AssetSource(
+                  "nota6.mp3",
+                ),
+              );
+            },
+          ),
+          PianKeys(
+            color: Colors.orange,
+            text: 'S I',
+            onTap: () {
+              audioPlayer.play(
+                AssetSource(
+                  "nota7.mp3",
+                ),
+              );
+            },
+          ),
         ],
       ),
     );
   }
 }
-

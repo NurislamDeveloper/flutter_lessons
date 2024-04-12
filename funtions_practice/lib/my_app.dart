@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
           43,
           72,
         ),
-      ),
+    ),
       home: const MyHomePage(),
     );
   }

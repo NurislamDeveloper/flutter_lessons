@@ -30,7 +30,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body:  Column(
         children: [
-          PianaKeys(nameOfKeys: "do",colorOfText: Colors.white, colorsOfConteiner: Colors.blue,onTap:() => player.play(AssetSource("assets/notes/do.mp3")) ,),
+          PianaKeys(nameOfKeys: "do",colorOfText: Colors.white, colorsOfConteiner: Colors.blue,onTap:() => player.play(AssetSource("assets/notes/note1.mp3")) ,),
         ],
       ),
     );

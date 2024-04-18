@@ -8,10 +8,32 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
+        debugShowCheckedModeBanner: false,
         theme: ThemeData(
-          appBarTheme:const  AppBarTheme(
+          appBarTheme: const AppBarTheme(
             centerTitle: true,
+            backgroundColor: Color.fromARGB(
+              255,
+              255,
+              255,
+              255,
+            ),
+            titleTextStyle: TextStyle(
+              color: Color.fromARGB(
+            255,
+            9,
+            36,
+            81,
+          ),
+              fontSize: 25,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          scaffoldBackgroundColor: const Color.fromARGB(
+            255,
+            9,
+            36,
+            81,
           ),
         ),
         home: const MyHomePage());

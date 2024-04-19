@@ -31,7 +31,8 @@ class _MyHomePageState extends State<MyHomePage> {
                 },
                 child: const Padding(
                   padding: EdgeInsets.fromLTRB(0, 0, 220,
-                      100), // here I moved icon from centere to the left side.
+                      100,
+                      ), // here I moved icon from centere to the left side.
                   child: Icon(
                     Icons.account_circle_outlined,
                     color: Colors.white,
@@ -51,7 +52,6 @@ class _MyHomePageState extends State<MyHomePage> {
               onTap: () {
                 Navigator.pop(context);
               },
-             
             ),
             ListTile(
               title: const Text(
@@ -71,7 +71,9 @@ class _MyHomePageState extends State<MyHomePage> {
                   fontSize: 22,
                 ),
               ),
-              onTap: () {},
+              onTap: () {
+                
+              },
             ),
           ],
         ),

@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
-// import 'package:practice_bol/data/models/test_model.dart';
 
-class FirstPages extends StatelessWidget {
-  const FirstPages({super.key});
+class FourthPages extends StatelessWidget {
+  const FourthPages({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          "FirstPages",
+          "FouthPages",
         ),
       ),
     );

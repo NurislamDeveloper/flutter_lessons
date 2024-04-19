@@ -29,8 +29,8 @@ class Stundents {
 }
 
 Stundents stundent_1 = Stundents(
-    name: "Asan",
-    surname: "Temirbekov",
+    name: "julduz",
+    surname: "weeek",
     age: 19,
     city: "bishkek",
     street: "Manas: 11",
@@ -39,9 +39,10 @@ Stundents stundent_1 = Stundents(
     maijor: "Computer sience",
     photoOfStundent: "assets/image/first.jpeg"
     );
+    
     Stundents stundent_2 = Stundents(
     name: "Asan",
-    surname: "Temirbekov",
+    surname: "artanovish",
     age: 19,
     city: "bishkek",
     street: "Manas: 11",
@@ -51,7 +52,7 @@ Stundents stundent_1 = Stundents(
     photoOfStundent: "assets/image/second.jpeg",
     );
     Stundents stundent_3 = Stundents(
-    name: "Asan",
+    name: "Amina",
     surname: "Temirbekov",
     age: 19,
     city: "bishkek",
@@ -62,8 +63,8 @@ Stundents stundent_1 = Stundents(
      photoOfStundent: "assets/image/first.jpeg"
     );
     Stundents stundent_4 = Stundents(
-    name: "Asan",
-    surname: "Temirbekov",
+    name: "Suimuk",
+    surname: "Rabshanbekov",
     age: 19,
     city: "bishkek",
     street: "Manas: 11",
@@ -73,7 +74,7 @@ Stundents stundent_1 = Stundents(
     photoOfStundent: "assets/image/second.jpeg"
     );
     Stundents stundent_5 = Stundents(
-    name: "Asan",
+    name: "Alia",
     surname: "Temirbekov",
     age: 19,
     city: "bishkek",

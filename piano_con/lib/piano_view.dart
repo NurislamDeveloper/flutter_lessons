@@ -10,8 +10,8 @@ class PianaView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final player = AudioPlayer();
-    List<String> notes = [
+    final player = AudioPlayer();   //it's package 
+    List<String> notes = [  //it's the list for nameof Buttom we are using this list when we invoke the name
       "f1",
       "f2",
       "f3",
@@ -28,7 +28,7 @@ class PianaView extends StatelessWidget {
       "f7",
     ];
 
-   final List <String> music = [
+   final List <String> music = [  //it's the list of music we are using by invoke the name and  index
      "nota1",
      "nota2",
      "nota3",
@@ -45,20 +45,20 @@ class PianaView extends StatelessWidget {
      "nota7",
    ];
     return Scaffold(
-      appBar: myAppBar(),
+      appBar: myAppBar(),    // here we seperate with extract method 
       body: Column(
         children: [
-          Expanded(child: Container()),
+          Expanded(child: Container()), //expended it's the widget 
           Expanded(
             flex: 2,
-            child: Stack(
+            child: Stack(   ///Overlaying Widgets: The primary purpose of the Stack widget is to overlay multiple widgets on top of each other. You can add children to the Stack and position them using the Positioned widget, which allows you to specify the alignment and positioning of each child within the stack
               children: [
-                ListView.builder(
-                  itemCount: 14,
+                ListView.builder(  //it's Listview.builder it allow us to create multiple conteiner or anything we want 
+                  itemCount: 14, //it's count of my Conteiner
                   scrollDirection: Axis.horizontal,
-                  itemBuilder: (context, index) {
-                    return InkWell(
-                      onTap: ()async {
+                  itemBuilder: (context, index) { 
+                    return InkWell(       
+                      onTap: ()async {  //as I know it's work for  feth some data or information from api during the working async other part of screen also work they are  not stop or  blocking  and await  waiting  the data from async 
                        await player.play(AssetSource("${music[index]}.mp3"));
                       },
                       child: Container(
@@ -79,7 +79,7 @@ class PianaView extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.end,
                           children: [
                             Text(
-                              notes[index],
+                              notes[index],  //in here I just invoke the index of list which I wrote top of the project 
                               style: const TextStyle(
                                 decoration: TextDecoration.underline,
                                 fontSize: 18,
@@ -95,10 +95,10 @@ class PianaView extends StatelessWidget {
                     );
                   },
                 ),
-                Positioned(
+                Positioned( ///Positioning Widgets: The Positioned widget is used to position children within the Stack. You can specify properties such as top, bottom, left, right, width, and height to precisely control the position and size of each child widget relative to the Stack.
                   left: 37,
                   child: Row(
-                    children: [
+                    children: [  //all black buttom which overlaying the grey buttom
                       BlackButton(notes: notes[0],nota: 1,),
                       const Gap(10),
                       BlackButton(notes: notes[1],nota: 2,),

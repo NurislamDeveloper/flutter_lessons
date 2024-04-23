@@ -21,8 +21,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
-
 // void nextPages() {
 //   if(whole[0] == stundent_1){
 //      Navigator.push(context, MaterialPageRoute(builder: (context) =>const FirstPages()));
@@ -45,7 +43,7 @@ class _MyHomePageState extends State<MyHomePage> {
 //   }else if (whole[9] == stundent_10) {
 //     Navigator.push(context, MaterialPageRoute(builder: (context) =>const TenthPages()));
 //   }
-  
+
 // }
   @override
   Widget build(BuildContext context) {
@@ -56,14 +54,25 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
       body: GridView.builder(
-        
         itemCount: whole.length,
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
         ),
         itemBuilder: (context, index) => InkWell(
           onTap: () {
-            Navigator.push(context, MaterialPageRoute(builder: (context) =>  EihthPages(allName: whole[index],allSurname: whole[index], allAge: whole[index],allCity: whole[index],allMajor: whole[index],allPhoto: whole[index], ),),);
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => EihthPages(
+                  allName: whole[index],
+                  allSurname: whole[index],
+                  allAge: whole[index],
+                  allCity: whole[index],
+                  allMajor: whole[index],
+                  allPhoto: whole[index],
+                ),
+              ),
+            );
             // nextPages();
           },
           child: Card(

@@ -1,4 +1,8 @@
+
+
 import 'package:flutter/material.dart';
+// import 'package:flutter/widgets.dart';
+// import 'package:gap/gap.dart';
 import 'package:practice_with_questions/constans/app_text_stulyies.dart';
 import 'package:practice_with_questions/models/models.dart';
 
@@ -16,17 +20,28 @@ class _MyHomePageState extends State<MyHomePage> {
   int count = 0;
   int trueAnwers = 0;
   int falseAswers = 0;
-  void next(bool isTrue) {
+
+  void next() {
     setState(() {
       count++;
     });
     if (count == all.length) {
       count = 0;
     }
+   setState(() {
+     if(trueAnwers == all.length|| falseAswers == all.length ){
+      trueAnwers++;
+      falseAswers ++;
+    }
+   });
+    
   }
 
   @override
   Widget build(BuildContext context) {
+    //     double width = MediaQuery.of(context).size.width;
+    // double heihth = MediaQuery.of(context).size.height;
+
     return Scaffold(
       appBar: myApp(),
       body: Padding(
@@ -45,13 +60,22 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             MyButtom(
               textToAnwers: 'True',
+              colorOfText: Colors.white,
+              sizeOfText: 25,
               color: Colors.green,
-              onTap: () {},
+              onTap: () {
+                next();
+              },
             ),
+
             MyButtom(
               textToAnwers: 'false',
+              colorOfText: Colors.white,
+              sizeOfText: 25,
               color: Colors.red,
-              onTap: () {},
+              onTap: () {
+                next();
+              },
             ),
             const SizedBox(
               height: 20,
@@ -81,21 +105,36 @@ class _MyHomePageState extends State<MyHomePage> {
         widget.textOfAppbar,
       ),
       actions: [
-        Container(
-          color: Colors.grey,
-          child: Row(
-            children: [
-              Text(
-                trueAnwers.toString(),
-                style: TextStyle(fontSize: 24),   ///here I want to invoke tih  themdara  ////////////////////////////
-              ),
-              const VerticalDivider(
-                color: Colors.white,
-              ),
-              Text(
-                falseAswers.toString(),
-              ),
-            ],
+        Padding(
+          padding:const  EdgeInsets.only(right: 20),
+          child: Container(
+            height: 40,
+            width: 60,
+            color: Colors.orangeAccent,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  trueAnwers.toString(),
+                  style: const TextStyle(
+                    color: Colors.white,
+                    fontSize: 24,
+                  ),
+                  
+                  ///here I want to invoke tih  themdara  ////////////////////////////
+                ),
+                const VerticalDivider(
+                  color: Colors.white,
+                ),
+                Text(
+                  falseAswers.toString(),
+                  style: const TextStyle(
+                    color: Colors.white,
+                    fontSize: 24,
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ], /////here I want to use MediaQuery  ///////////////////////////////////////////////////////////////////////////////////////////
@@ -109,20 +148,30 @@ class MyButtom extends StatelessWidget {
     required this.textToAnwers,
     required this.color,
     required this.onTap,
+    required this.colorOfText,
+    required this.sizeOfText,
+
   });
   final String textToAnwers;
   final Color color;
   final Function() onTap;
-
+  final Color colorOfText;
+  final double sizeOfText;
+  
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
         backgroundColor: color,
+           fixedSize: const Size(120, 40),  //in here I can  control the size of elevetedButtom 
       ),
       onPressed: onTap,
       child: Text(
         textToAnwers,
+        style: TextStyle(
+          color: colorOfText,
+          fontSize: sizeOfText,
+        ),
       ),
     );
   }

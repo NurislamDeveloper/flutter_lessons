@@ -20,20 +20,25 @@ class _MyHomePageState extends State<MyHomePage> {
   int count = 0;
   int trueAnwers = 0;
   int falseAswers = 0;
-
+void forAnwers(bool isTrueAnswers) {
+  setState(() {
+    if(all[count].anwers == isTrueAnswers ) {
+    trueAnwers++;
+    }else {
+      falseAswers++;
+    }
+  });
+}
   void next() {
     setState(() {
       count++;
     });
-    if (count == all.length) {
+    if (count == all.length ) {
       count = 0;
+    
+      trueAnwers = 0;
+      falseAswers = 0;
     }
-   setState(() {
-     if(trueAnwers == all.length|| falseAswers == all.length ){
-      trueAnwers++;
-      falseAswers ++;
-    }
-   });
     
   }
 
@@ -65,6 +70,7 @@ class _MyHomePageState extends State<MyHomePage> {
               color: Colors.green,
               onTap: () {
                 next();
+                forAnwers(true);
               },
             ),
 
@@ -75,6 +81,7 @@ class _MyHomePageState extends State<MyHomePage> {
               color: Colors.red,
               onTap: () {
                 next();
+                forAnwers(false);
               },
             ),
             const SizedBox(

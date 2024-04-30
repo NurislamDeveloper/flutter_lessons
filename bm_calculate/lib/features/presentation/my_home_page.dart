@@ -12,6 +12,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,9 +28,11 @@ class _MyHomePageState extends State<MyHomePage> {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 MaleFemlalwCard(
+                 icon: Icons.male,
                   name: "male",
                 ),
                 MaleFemlalwCard(
+                 icon: Icons.female,
                   name: "female",
                 ),
               ],
@@ -47,7 +50,6 @@ class _MyHomePageState extends State<MyHomePage> {
       bottomNavigationBar: const buttomBar(),
     );
   }
-
   AppBar myAppBar() {
     return AppBar(
       centerTitle: true,

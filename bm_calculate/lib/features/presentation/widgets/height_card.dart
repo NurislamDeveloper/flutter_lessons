@@ -1,10 +1,17 @@
 import 'package:bm_calculate/features/presentation/constans/app_text_style.dart';
 import 'package:flutter/material.dart';
 
-class HeightCard extends StatelessWidget {
+class HeightCard extends StatefulWidget {
   const HeightCard({
     super.key,
   });
+
+  @override
+  State<HeightCard> createState() => _HeightCardState();
+}
+
+class _HeightCardState extends State<HeightCard> {
+          double currentSliderValue = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -45,11 +52,20 @@ class HeightCard extends StatelessWidget {
               inactiveColor: Colors.orange,
               min: 0,
               max: 150,
-              value: 100, onChanged: (value) {})
+              divisions: 5,
+              value: currentSliderValue,
+              label: currentSliderValue.round().toString(),
+               onChanged: (double value) {
+                setState(() {
+                  currentSliderValue = value;
+                });
+             },
+            )
           ],
         ),
       ),
     );
   }
 }
+
 

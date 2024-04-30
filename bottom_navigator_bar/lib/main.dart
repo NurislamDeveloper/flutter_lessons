@@ -73,6 +73,7 @@ class _MyHomePageState extends State<MyHomePage> {
             icon: Icon(Icons.account_circle_outlined),
           ),
         ],
+        mouseCursor: SystemMouseCursors.grab,
         selectedFontSize: 25,
         selectedItemColor: Colors.white,
         selectedLabelStyle: const TextStyle(

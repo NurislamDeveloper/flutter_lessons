@@ -29,16 +29,16 @@ class _HeightCardState extends State<HeightCard> {
               "Height",
               style:   AppTextStule.textStyle,
             ),
-             const Row(
+              Row(
             mainAxisAlignment: MainAxisAlignment.center,
             textBaseline: TextBaseline.alphabetic,
             crossAxisAlignment: CrossAxisAlignment.baseline,
               children: [
                  Text(
-                  "180",
+                  "$currentSliderValue",
                   style: AppTextStule.numStyle,
                 ),
-               Text(
+               const Text(
               "cm",
              style:   AppTextStule.textStyle,
             ),
@@ -51,7 +51,7 @@ class _HeightCardState extends State<HeightCard> {
               activeColor: Colors.blue,
               inactiveColor: Colors.orange,
               min: 0,
-              max: 150,
+              max: 200,
               divisions: 5,
               value: currentSliderValue,
               label: currentSliderValue.round().toString(),

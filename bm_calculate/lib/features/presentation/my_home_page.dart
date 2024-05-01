@@ -17,15 +17,15 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: myAppBar(),
-      body: const Padding(
-        padding: EdgeInsets.symmetric(
-          horizontal: 20,
+      body:  Padding(
+        padding:const  EdgeInsets.symmetric(
+          horizontal: 25,
         ),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            const Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 MaleFemlalwCard(
                  icon: Icons.male,
@@ -37,12 +37,12 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ],
             ),
-            HeightCard(),
+            const HeightCard(),
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                WeigthAndHeightCard(nameOfFirst: "weight",nameOfSecond: 60,),
-                WeigthAndHeightCard(nameOfFirst: "age",nameOfSecond: 28,)],
+                WeigthAndHeightCard(nameOfFirst: "weight",nameOfSecond: 60, onChanged: () {}, onChangeded: () {  },),
+                WeigthAndHeightCard(nameOfFirst: "age",nameOfSecond: 28, onChanged: () {  }, onChangeded: () {  },)],
             ),
           ],
         ),

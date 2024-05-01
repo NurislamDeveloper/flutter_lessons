@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 
 class MaleFemlalwCard extends StatelessWidget {
   const MaleFemlalwCard({
-    super.key, required this.name, required this.icon, 
+    super.key,
+    required this.name,
+    required this.icon,
   });
   final String name;
   final IconData icon;
@@ -15,20 +17,24 @@ class MaleFemlalwCard extends StatelessWidget {
       height: 177,
       child: Card(
         shadowColor: Colors.white,
-        color:const  Color(0xff0b0120,),
+        color: const Color(
+          0xff0b0120,
+        ),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-              Icon(
-              icon , // Use iconData here
+            Icon(
+              icon, // Use iconData here
               size: 40, // You can adjust the size of the icon as needed
-              color: Colors.white, // You can adjust the color of the icon as needed
+              color: Colors
+                  .white, // You can adjust the color of the icon as needed
             ),
-
-                          
+            const SizedBox(
+              height: 10,
+            ),
             Text(
               name.toUpperCase(),
-              style:  AppTextStule.textStyle,
+              style: AppTextStule.textStyle,
             ),
           ],
         ),

@@ -16,7 +16,7 @@ class _HeightCardState extends State<HeightCard> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 335,
+      width: MediaQuery.of(context).size.width,
       height: 176,
       child: Card(
             shadowColor: Colors.white,
@@ -52,7 +52,7 @@ class _HeightCardState extends State<HeightCard> {
               inactiveColor: Colors.orange,
               min: 0,
               max: 200,
-              divisions: 5,
+              divisions: 200,
               value: currentSliderValue,
               label: currentSliderValue.round().toString(),
                onChanged: (double value) {

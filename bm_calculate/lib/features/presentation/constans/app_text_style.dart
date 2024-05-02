@@ -10,7 +10,7 @@ class AppTextStule {
   );
   static const numStyle = TextStyle(
     color: Colors.white,
-    fontSize: 40,
+    fontSize: 32, //here I change the size from42 to 32
     fontWeight: FontWeight.w800,
   );
   static const heightStyle = TextStyle(
@@ -22,4 +22,5 @@ class AppTextStule {
     color: Colors.white,
     fontSize: 70,
   );
+  
 }

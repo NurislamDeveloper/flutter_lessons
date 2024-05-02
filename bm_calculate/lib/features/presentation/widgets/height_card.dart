@@ -43,7 +43,6 @@ class _HeightCardState extends State<HeightCard> {
              style:   AppTextStule.textStyle,
             ),
               ],
-            
 
              ),
             Slider(

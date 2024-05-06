@@ -3,8 +3,8 @@ import 'package:burger_page/presenteions/widgets/doner.dart';
 import 'package:burger_page/presenteions/widgets/hamburgeres.dart';
 import 'package:burger_page/presenteions/widgets/pancarke.dart';
 import 'package:burger_page/presenteions/widgets/pizza.dart';
+import 'package:burger_page/presenteions/widgets/sandwitch.dart';
 import 'package:burger_page/presenteions/widgets/shaurma.dart';
-import 'package:burger_page/presenteions/widgets/somthinf.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -24,7 +24,7 @@ class _MyHomePageState extends State<MyHomePage> {
       const Doner(),
       const Pancake(),
       const Pizza(),
-      const Something(),
+      const Sandwitch(),
     ]; 
     final List <String> nameOfMenue = [
     "Hambugers",
@@ -35,28 +35,10 @@ class _MyHomePageState extends State<MyHomePage> {
     "Sandwitch",
 
     ];
-    final List <String>images = [
-    'assets/hamburgers.png'
-    'assets/shaurma.png'
-    'assets/doner.png'
-    'assets/pancake.png'
-    'assets/pizza.png'
-    'assets/sandwitch.png'
-
-    ];
-    // void initState() {
-    //   super.initState();
-    //   pages = [
-        
-    //   Hamnurgers(),
-    //   ShaurmaPage(),
-    //   Doner(),
-    //   Pancake(),
-    //   Pizza(),
-    //   Something(),
-    //   ];
-  
-    // }
+    
+     
+    
+    
     return Scaffold(
       backgroundColor: StyleOfAll.color,
       appBar: AppBar(
@@ -82,9 +64,9 @@ class _MyHomePageState extends State<MyHomePage> {
             color:Colors.white ,
             child:Row(
               children: [
-                Image.asset('assets/hamburgers.png', // Accessing image dynamically using index
-                    width: 100, // Adjust as needed
-                    height: 100,
+                Image.asset('assets/doner.png',// Accessing image dynamically using index
+                    // width: 100, // Adjust as needed
+                    // height: 100,
                      // Adjust as needed
 ),
                    Text(nameOfMenue[index]),

@@ -1,4 +1,5 @@
 import 'package:burger_page/data/constans/color_and_style.dart';
+import 'package:burger_page/data/constans/contans/model.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -35,7 +36,7 @@ class ShaurmaPage extends StatelessWidget {
              ),
             ],
           ),
-          const Text("It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+          Text(Models.recipies[2],
           style: StyleOfAll.myApp,
            ),
         ],

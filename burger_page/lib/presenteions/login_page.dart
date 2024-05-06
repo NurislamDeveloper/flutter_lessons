@@ -1,5 +1,5 @@
 import 'package:burger_page/data/constans/color_and_style.dart';
-import 'package:burger_page/presenteions/widgets/my_boddy.dart';
+import 'package:burger_page/presenteions/widgets/main_page.dart';
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';

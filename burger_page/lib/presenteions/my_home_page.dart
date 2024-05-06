@@ -1,6 +1,7 @@
 import 'package:burger_page/data/constans/color_and_style.dart';
 import 'package:burger_page/presenteions/widgets/doner.dart';
 import 'package:burger_page/presenteions/widgets/hamburgeres.dart';
+import 'package:burger_page/presenteions/widgets/my_listview.dart';
 import 'package:burger_page/presenteions/widgets/pancarke.dart';
 import 'package:burger_page/presenteions/widgets/pizza.dart';
 import 'package:burger_page/presenteions/widgets/sandwitch.dart';
@@ -35,13 +36,11 @@ class _MyHomePageState extends State<MyHomePage> {
     "Sandwitch",
 
     ];
-    
-     
-    
-    
+
     return Scaffold(
       backgroundColor: StyleOfAll.color,
       appBar: AppBar(
+        iconTheme: StyleOfAll.styleoFButtom, // Set the color of the back arrow      
         backgroundColor: StyleOfAll.color,
         centerTitle: true,
         title: Text(
@@ -53,29 +52,8 @@ class _MyHomePageState extends State<MyHomePage> {
         shadowColor: Colors.black,
         elevation: 5,
       ),
-      body: ListView.builder(
-        itemCount:pages.length,
-        scrollDirection: Axis.vertical,
-        // ignore: avoid_types_as_parameter_names
-        itemBuilder: (BuildContext context  ,int index) {
-         return  InkWell(
-          onTap: () {Navigator.push(context,MaterialPageRoute(builder: (context) => pages[index]));},
-           child: Card(
-            color:Colors.white ,
-            child:Row(
-              children: [
-                Image.asset('assets/doner.png',// Accessing image dynamically using index
-                    // width: 100, // Adjust as needed
-                    // height: 100,
-                     // Adjust as needed
-),
-                   Text(nameOfMenue[index]),
-              ],
-            ),
-                   ),
-         );
-       },
-      ),
+      body: MyListView(pages: pages, nameOfMenue: nameOfMenue),
     );
   }
 }
+

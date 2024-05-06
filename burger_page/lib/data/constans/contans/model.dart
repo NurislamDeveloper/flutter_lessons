@@ -7,13 +7,5 @@ class Models {
     "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system",
     "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga",
     ];
-    final List <String>images = [
-    'assets/hamburgers.png'
-    'assets/shaurma.png'
-    'assets/doner.png'
-    'assets/pancake.png'
-    'assets/pizza.png'
-    'assets/sandwitch.png'
-    ];
-
+    
 }

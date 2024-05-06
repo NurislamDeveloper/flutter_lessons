@@ -12,6 +12,7 @@ class ShaurmaPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: StyleOfAll.color,
       appBar: AppBar(
+         iconTheme: StyleOfAll.styleoFButtom, // Set the color of the back arrow
          backgroundColor: StyleOfAll.color,
         centerTitle: true,
         title: Text(

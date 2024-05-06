@@ -7,5 +7,7 @@ class StyleOfAll {
     fontSize: 27,
     fontWeight: FontWeight.w400,
   );
-  static const styleoFButtom = TextStyle();
+  static const styleoFButtom = IconThemeData(
+    color: Colors.white,
+  );
 }

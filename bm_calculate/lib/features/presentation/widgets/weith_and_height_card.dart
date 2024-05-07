@@ -2,18 +2,18 @@ import 'package:bm_calculate/features/presentation/constans/app_text_style.dart'
 import 'package:flutter/material.dart';
 
 class WeigthAndHeightCard extends StatelessWidget {
-
-   const WeigthAndHeightCard({
+  const WeigthAndHeightCard({
     super.key,
     required this.nameOfFirst,
-    required this.nameOfSecond, required this.onChanged, required this.onChangeded, 
+    required this.nameOfSecond,
+    required this.onChanged,
+    required this.onChangeded,
   });
   final String nameOfFirst;
-  final int nameOfSecond;
-  final void Function () onChanged;
-    final void Function () onChangeded;
+  final String nameOfSecond;
+  final void Function()? onChanged;
+  final void Function()? onChangeded;
 
-  
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -32,14 +32,28 @@ class WeigthAndHeightCard extends StatelessWidget {
               style: AppTextStule.textStyle,
             ),
             Text(
-              "$nameOfSecond",
+              nameOfSecond,
               style: AppTextStule.numStyle,
             ),
-             Row(
+            Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                IconButton(onPressed: onChanged, icon: const Icon(Icons.remove_circle)),
-                IconButton(onPressed: onChangeded, icon: const Icon(Icons.add_circle))
+                IconButton(
+                  onPressed: onChanged,
+                  icon: const Icon(
+                    Icons.remove_circle,
+                    color: Colors.white,
+                    size: 30,
+                  ),
+                ),
+                IconButton(
+                  onPressed: onChangeded,
+                  icon: const Icon(
+                    Icons.add_circle,
+                    color: Colors.white,
+                    size: 30,
+                  ),
+                )
               ],
             )
           ],
@@ -48,3 +62,5 @@ class WeigthAndHeightCard extends StatelessWidget {
     );
   }
 }
+
+

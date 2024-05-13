@@ -4,7 +4,6 @@ import 'package:bm_calculate/features/presentation/widgets/height_card.dart';
 import 'package:bm_calculate/features/presentation/widgets/male_female_card.dart';
 import 'package:bm_calculate/features/presentation/widgets/weith_and_height_card.dart';
 import 'package:flutter/material.dart';
-
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
 
@@ -84,7 +83,6 @@ class _MyHomePageState extends State<MyHomePage> {
                   onChangeded: () => setState(
                     () {
                       weight++;
-                    
                     },
                   ),
                 ),
@@ -110,7 +108,6 @@ class _MyHomePageState extends State<MyHomePage> {
       bottomNavigationBar: const buttomBar(),
     );
   }
-
   AppBar myAppBar() {
     return AppBar(
       centerTitle: true,

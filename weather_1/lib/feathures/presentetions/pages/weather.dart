@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:weather_1/feathures/presentetions/pages/bishkekandkyrgystan.dart';
 import 'package:weather_1/feathures/presentetions/widgets/SearchAndMenue.dart';
+import 'package:weather_1/feathures/presentetions/widgets/bishkekAndKyrgystan.dart';
+import 'package:weather_1/feathures/presentetions/widgets/cards.dart';
+import 'package:weather_1/feathures/presentetions/widgets/clodyAndDegree.dart';
+import 'package:weather_1/feathures/presentetions/widgets/listOfText.dart';
 
 class WeatherPage extends StatefulWidget {
   const WeatherPage({super.key});
@@ -11,46 +13,47 @@ class WeatherPage extends StatefulWidget {
 }
 
 class _WeatherPageState extends State<WeatherPage> {
+  double numberOFSlider = 20;
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: Column(
-          children: [
-            const SearchAndMenue(),
-            const BishkekAndKyrgystan(),
-            const SizedBox(
-              height: 8.62,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(left: 30,right: 30),
-              child: Row(
-                children: [
-                  SvgPicture.asset('assets/svg_image/cludy.svg'),
-                  const Column(
-                    children: [
-                      Text(
-                        "19",
-                        style: TextStyle(
-                          fontSize: 74.17,
-                          fontWeight: FontWeight.w700,
-                          color: Color(0xff303345),
-                        ),
-                      ),
-                      Text(
-                        "Rainy",
-                        style: TextStyle(
-                          fontSize: 24.15,
-                          fontWeight: FontWeight.w400,
-                          color: Color(0xff303345),
-                        ),
-                      )
-                    ],
-                  )
-                ],
+        body: Padding(
+          padding:const  EdgeInsets.only(
+            left: 15,
+            right: 15,
+          ),
+          child: Column(
+            children: [
+              const SearchAndMenue(),
+              const BishkekAndKyrgystan(),
+              const SizedBox(
+                height: 8.62,
               ),
-            )
-          ],
+              const ClodyAndDegree(),
+              const Cards(),
+              const SizedBox(
+                height: 10,
+              ),
+              const ListOfText(),
+              Slider(
+                activeColor: Colors.purpleAccent,
+                thumbColor: Colors.white,
+                inactiveColor: Colors.black,
+                min: 0,
+                max: 200,
+                divisions: 200,
+                label: numberOFSlider.round().toString(),
+                value: numberOFSlider,
+                onChanged: (double value) {
+                  setState(() {
+                    numberOFSlider = value;
+                   },
+                  );
+                },
+              )
+            ],
+          ),
         ),
       ),
     );

@@ -10,33 +10,30 @@ class ClodyAndDegree extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        SvgPicture.asset('assets/svg_image/cludy.svg'),
-        const Padding(
-          padding: EdgeInsets.only(bottom: 30),
-          child: Column(
-            children: [
-              Text(
-                textAlign: TextAlign.start,
-                "19",
-                style: TextStyle(
-                  fontSize: 74.17,
-                  fontWeight: FontWeight.w700,
-                  color: Color(0xff303345),
-                ),
+        SvgPicture.asset('assets/svg_image/cludy.svg',height: 210,),
+        const Column(
+          children: [
+            Text(
+              textAlign: TextAlign.start,
+              "19",
+              style: TextStyle(
+                fontSize: 65,
+                fontWeight: FontWeight.w700,
+                color: Color(0xff303345),
               ),
-              Text(
-                "Rainy",
-                style: TextStyle(
-                  fontSize: 24.15,
-                  fontWeight: FontWeight.w400,
-                  color: Color(0xff303345),
-                ),
-              )
-            ],
-          ),
+            ),
+            Text(
+              "Rainy",
+              style: TextStyle(
+                fontSize: 22.15,
+                fontWeight: FontWeight.w400,
+                color: Color(0xff303345),
+              ),
+            )
+          ],
         ),
         const Padding(
-          padding: EdgeInsets.only(bottom: 105),
+          padding: EdgeInsets.only(bottom:105),
           child: Text(
             " \u2103",
             style: TextStyle(

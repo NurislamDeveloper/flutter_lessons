@@ -17,8 +17,8 @@ class SearchAndMenue extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          SvgPicture.asset('assets/svg_image/icons.svg'),
-          SvgPicture.asset('assets/svg_image/Vector.svg'),
+          SvgPicture.asset('assets/svg_image/icons.svg',height: 37,),
+          SvgPicture.asset('assets/svg_image/Vector.svg',height: 25,),
         ],
       ),
     );

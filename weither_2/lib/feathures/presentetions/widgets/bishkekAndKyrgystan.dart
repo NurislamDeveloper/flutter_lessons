@@ -19,7 +19,7 @@ class BishkekAndKyrgystan extends StatelessWidget {
           Text(
             'Bishkeke,\nKyrgystan',
             style: TextStyle(
-              fontSize: 34.5,
+              fontSize: 33,
               fontWeight: FontWeight.w500,
               color: Color(
                 0xff313341,
@@ -38,7 +38,7 @@ class BishkekAndKyrgystan extends StatelessWidget {
               'Tue, Jun 30',
               style: TextStyle(
                 color: Color(0xff000000),
-                fontSize: 15.52,
+                fontSize: 13,
                 fontWeight: FontWeight.w400,
               ),
             ),

@@ -8,7 +8,7 @@ class ListOfText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const  Padding(
-        padding: EdgeInsets.only(left: 15,),
+        padding: EdgeInsets.only(left: 15,top: 5),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [

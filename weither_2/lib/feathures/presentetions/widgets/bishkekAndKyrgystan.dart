@@ -3,13 +3,14 @@ import 'package:flutter/material.dart';
 class BishkekAndKyrgystan extends StatelessWidget {
   const BishkekAndKyrgystan({
     super.key,
+    required this.name,
   });
-
+ final String name;
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    return Column(
       children: [
-        SizedBox(
+        const SizedBox(
           height: 10,
         ),
        Align(
@@ -17,8 +18,8 @@ class BishkekAndKyrgystan extends StatelessWidget {
       child: Column(
         children: [
           Text(
-            'Bishkeke,\nKyrgystan',
-            style: TextStyle(
+            name,
+            style: const TextStyle(
               fontSize: 33,
               fontWeight: FontWeight.w500,
               color: Color(
@@ -26,13 +27,13 @@ class BishkekAndKyrgystan extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10.35,
                ),
                ],
               ), 
              ),
-              Align(
+              const Align(
             alignment: Alignment.centerLeft,
             child: Text(
               'Tue, Jun 30',

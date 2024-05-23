@@ -40,7 +40,7 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text("$iSTrue"),
+          Text("$iSTrue",style: TextStyle(color: iSTrue == false ? Colors.blue: Colors.amber,fontSize: iSTrue == false ?15:34),),
           // Text(iSTrue == false ? 'false' :"true",style: TextStyle(color:iSTrue ? Colors.red:Colors.blue,),),
 
          ElevatedButton(onPressed: () {
@@ -49,7 +49,7 @@ class _MyHomePageState extends State<MyHomePage> {
         //    iSTrue =! iSTrue;
         //  });},
          },
-          child: const Text("click"))
+          child: const Text("click",))
         ],
       ),
     );

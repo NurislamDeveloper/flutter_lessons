@@ -3,29 +3,32 @@ import 'package:flutter_svg/svg.dart';
 
 class ClodyAndDegree extends StatelessWidget {
   const ClodyAndDegree({
-    super.key,
+    super.key, required this.text,
+    required this.temp,
   });
+  final String text;
+  final String temp;
 
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
         SvgPicture.asset('assets/svg_image/cludy.svg',height: 210,),
-        const Column(
+         Column(
           children: [
-            Text(
+             Text(
               textAlign: TextAlign.start,
-              "19",
-              style: TextStyle(
+              temp,
+              style: const TextStyle(
                 fontSize: 65,
                 fontWeight: FontWeight.w700,
                 color: Color(0xff303345),
               ),
             ),
             Text(
-              "Rainy",
-              style: TextStyle(
-                fontSize: 22.15,
+              text,
+              style:const  TextStyle(
+                fontSize: 17.15,
                 fontWeight: FontWeight.w400,
                 color: Color(0xff303345),
               ),

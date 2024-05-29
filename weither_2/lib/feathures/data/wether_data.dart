@@ -16,7 +16,7 @@ class WeatherData {
   Future<WeatherModel?> fetchDataFromDio () async {
     final dio = Dio();
     final responseFromDio = await dio.get(
-      'https://api.openweathermap.org/data/2.5/weather?q=bishkek,&appid=41aa18abb8974c0ea27098038f6feb1b',
+      'https://api.openweathermap.org/data/2.5/weather?q=turkey,&appid=41aa18abb8974c0ea27098038f6feb1b',
     );
     if (responseFromDio.statusCode == 200) {
       final weather = WeatherModel(
@@ -25,9 +25,11 @@ class WeatherData {
         description: responseFromDio.data['weather'][0]['description'],
         icon: responseFromDio.data['weather'][0]['icon'],
         temp:  responseFromDio.data['main']['temp'],
-        name:  responseFromDio.data['name']
+        name:  responseFromDio.data['name'],
+        speed:  responseFromDio.data['wind']['speed'],
+        humidity: responseFromDio.data['main']['humidity'],
       );
       return weather;
-    }
+    }return null;
   }
 }

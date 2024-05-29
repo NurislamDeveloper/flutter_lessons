@@ -6,6 +6,8 @@ class WeatherModel {
       required this.icon,
       required this.name,
       required this.temp,
+      required this.speed,
+      required this.humidity
       });
 
   final int id;
@@ -14,4 +16,6 @@ class WeatherModel {
   final String icon;
   final String name;
   final double temp;
+  final double speed;
+  final int humidity;
 }

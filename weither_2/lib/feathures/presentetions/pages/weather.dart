@@ -37,6 +37,7 @@ class _WeatherPageState extends State<WeatherPage> {
               } else if (snapshot.hasData) {
                 double temp = snapshot.data!.temp - 273.15;
                 return Column(
+                  
           children: [
             Column(
               children: [
@@ -58,8 +59,9 @@ class _WeatherPageState extends State<WeatherPage> {
                       children: [
                         const SearchAndMenue(),
                         BishkekAndKyrgystan(name: snapshot.data!.name,),
-                         ClodyAndDegree(text: snapshot.data!.main,temp: temp.toStringAsFixed(1),),
-                        const Cards(),
+                         ClodyAndDegree(text: snapshot.data!.main,temp: temp.toStringAsFixed(1),
+                         icon: 'https://openweathermap.org/img/wn/${snapshot.data!.icon}@2x.png'),
+                         Cards(speed: snapshot.data!.speed,humidity: snapshot.data!.humidity,),
                         const ListOfText(),
                         Slider(
                           activeColor:const  Color.fromARGB(255, 255, 255, 255),

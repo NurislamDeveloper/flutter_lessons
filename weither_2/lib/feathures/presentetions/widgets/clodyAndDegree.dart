@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
 class ClodyAndDegree extends StatelessWidget {
   const ClodyAndDegree({
     super.key, required this.text,
     required this.temp,
+    required this.icon,
   });
   final String text;
   final String temp;
-
+  final String icon;
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
-        SvgPicture.asset('assets/svg_image/cludy.svg',height: 210,),
+        Image.network(icon,height: 200,),
          Column(
           children: [
              Text(

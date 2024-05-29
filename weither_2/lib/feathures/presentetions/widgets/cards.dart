@@ -4,8 +4,11 @@ import 'package:flutter_svg/svg.dart';
 class Cards extends StatelessWidget {
   const Cards({
     super.key,
+    required this.speed,
+    required this.humidity,
   });
-
+final double speed;
+final int humidity;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -35,7 +38,7 @@ class Cards extends StatelessWidget {
                   ),
                   const Text('RainFall'),
                   const SizedBox(width: 125),
-                  const Text('3 cm'),
+                   Text(speed.toString()),
                 ],
               ),
             ),
@@ -53,7 +56,7 @@ class Cards extends StatelessWidget {
               ),
             ),
             child: Padding(
-              padding: const EdgeInsets.only(left: 17.5, right: 42.29),
+              padding: const EdgeInsets.only(left: 11, right: 42.29),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -70,7 +73,7 @@ class Cards extends StatelessWidget {
                   ),
                   const Text('Windy'),
                   const SizedBox(width: 125),
-                  const Text('160 km/h'),
+                   Text(humidity.toString()),
                 ],
               ),
             ),
@@ -88,7 +91,7 @@ class Cards extends StatelessWidget {
               ),
             ),
             child: Padding(
-              padding: const EdgeInsets.only(left: 24.43, right: 48.29),
+              padding: const EdgeInsets.only(left: 24, right: 48.29),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
